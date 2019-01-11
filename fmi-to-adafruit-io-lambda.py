@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     fmi_time_delta = datetime.datetime.now() - datetime.timedelta(minutes=60)
     fmi_time = fmi_time_delta.replace(microsecond=0).isoformat()
     
-    fmi_url = 'http://data.fmi.fi/fmi-apikey/bb70154a-43c8-4bf3-a493-d1b8ca55af25/wfs?request=getFeature&storedquery_id=fmi::observations::weather::simple&place=malmi,helsinki&timestep=30&maxlocations=1&starttime={0}&parameters=t2m,rh'.format(fmi_time)
+    fmi_url = 'http://data.fmi.fi/fmi-apikey/XXXXXX/wfs?request=getFeature&storedquery_id=fmi::observations::weather::simple&place=malmi,helsinki&timestep=30&maxlocations=1&starttime={0}&parameters=t2m,rh'.format(fmi_time)
 
     fmi_response = requests.get(fmi_url)
 
