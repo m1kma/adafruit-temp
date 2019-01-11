@@ -1,1 +1,1 @@
-# adafruit-temp
+# adafruit-temperature
